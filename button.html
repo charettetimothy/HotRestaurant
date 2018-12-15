@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    // Question: What does this code do?
+    $("#add-btn").on("click", function (event) {
+        event.preventDefault();
+
+        var newCharacter = {
+            routeName: $("#nameInput").val().trim(),
+            name: $("#nameInput").val().trim(),
+            phoneNumber: $("#phoneNumberInput").val().trim(),
+            howMany: $("#howManyInput").val().trim(),
+            uniqeID: $("#uniqueID").val().trim()
+        };
+
+        // Question: What does this code do??
+        for (i = 0; i < resrvations.length; i++){
+            if (reservations[i] >= 4) {
+                console.log()
+                alert("You've been added to the waiting list!");
+            }
+            else{
+                $.post("/api/characters", newCharacter)
+            .then(function (data) {
+                console.log(data);
+                alert("Reservation Confirmed!");
+            });
+
+            }
+        }
+       
+
+    });
+
+</script>
+
+
+
+

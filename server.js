@@ -19,6 +19,16 @@ var reservations = [
     }
 ]
 
+var waitList = [
+    {
+        routeName: "",
+        name: "",
+        phoneNumber: "",
+        howMany: "",
+        uniqueId: ""
+    }
+]
+
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "view.html"));
   });
